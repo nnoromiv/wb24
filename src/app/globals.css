@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, html, body {
+  scroll-behavior: smooth;
+  transition: all 2ms ease-in;
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+@keyframes moveIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+
+[data-collapse='true']{
+  width: 20;
+}
+
+[data-collapse='true'] ul {
+  align-items: center;
+}
+
+[data-collapse='true'] ul div li a p,
+[data-collapse='true'] ul li p {
+  display: none;
+}
+
+input[type="password"]::-ms-reveal {
+  display: none; /* For Internet Explorer and Edge */
+}
+input[type="password"]::-webkit-search-clear-button,
+input[type="password"]::-webkit-search-decoration,
+input[type="password"]::-webkit-search-cancel-button,
+input[type="password"]::-webkit-search-results-button,
+input[type="password"]::-webkit-search-results-decoration {
+  display: none;
+}
